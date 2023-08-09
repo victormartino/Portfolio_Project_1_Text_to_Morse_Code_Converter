@@ -18,14 +18,6 @@ converted_chars = ['. _', '_ . . .', '_ . _ .', '_ . .', '.', '. . _ .', '_ _ .'
                    '. _ . . _ .', '. . . _ . . _', '. _ _ . _ .', '       ']
 
 
-def retry():
-    new_msg = input('Would you like to convert another message? Type "yes" or "no"\n').lower()
-    if new_msg == 'yes':
-        convert_message()
-    else:
-        print("Thank you for using Victor's text to morse code converter.\nHave a great day!")
-
-
 def convert_message():
     original_message = input('Please enter your message (use english characters only):\n').lower()
     if original_message == "":
@@ -52,6 +44,14 @@ def convert_message():
             # converts the result, which is a list, into a string:
             print("".join(message_in_morse))
             retry()
+
+
+def retry():
+    new_msg = input('Would you like to convert another message? Type "yes" or "no"\n').lower()
+    if new_msg == 'yes':
+        convert_message()
+    else:
+        print("Thank you for using Victor's text to morse code converter.\nHave a great day!")
 
 
 convert_message()
